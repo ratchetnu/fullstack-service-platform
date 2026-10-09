@@ -390,6 +390,10 @@ The current design is right for one business with a handful of staff. Here is wh
 - **Safer releases.** Preview environments per pull request, a staging environment with production-like data volumes, canary or blue/green releases, infrastructure as code (Terraform), secrets in a managed vault, and a Content Security Policy.
 - **Privacy and compliance.** Data retention rules and an audit of who viewed customer personal data, not only who changed it.
 
+## How this repository was built
+
+I used AI-assisted development as part of the implementation workflow, but I reviewed the result, decided what to keep, and required the repository's tests and checks to pass before publication.
+
 ---
 
 ## License
