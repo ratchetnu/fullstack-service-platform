@@ -1,0 +1,57 @@
+{
+  "name": "fullstack-service-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reference full-stack application for a service business: customers, bookings, jobs and job status.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Timmothy Jones (https://github.com/ratchetnu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ratchetnu/fullstack-service-platform.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "test:e2e": "playwright test",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:reset": "tsx scripts/reset.ts",
+    "screenshots": "tsx scripts/screenshots.ts",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "pg": "8.16.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.56.1",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "22.20.5",
+    "@types/pg": "8.15.6",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "eslint": "9.39.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "globals": "16.5.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1",
+    "vitest": "5.0.3"
+  }
+}
